@@ -24,11 +24,12 @@ public class InventoryShowHide : MonoBehaviour
         panel.gameObject.SetActive(state);*/
         sound.Play();
         Animator animator = panel.GetComponent<Animator>();
-        if(animator!=null)
+        if (animator != null)
         {
             bool isOpen = animator.GetBool("open");
-
+            Debug.Log(isOpen);
             animator.SetBool("open", !isOpen);
         }
     }
 }
+
