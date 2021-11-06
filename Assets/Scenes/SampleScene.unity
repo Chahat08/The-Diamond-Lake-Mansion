@@ -1797,12 +1797,12 @@ PrefabInstance:
     - target: {fileID: 5377248891932618222, guid: 2efea980a426c7346bd7d01d40be26cd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.45
+      value: -5.8
       objectReference: {fileID: 0}
     - target: {fileID: 5377248891932618222, guid: 2efea980a426c7346bd7d01d40be26cd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.16487223
+      value: -2.11
       objectReference: {fileID: 0}
     - target: {fileID: 5377248891932618222, guid: 2efea980a426c7346bd7d01d40be26cd,
         type: 3}
@@ -3491,7 +3491,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 942343669}
   m_HandleRect: {fileID: 942343668}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -5908,7 +5908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 362c3cfb1a9a95244b9385030b6a1060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 0}
+  sound: {fileID: 890029565}
 --- !u!114 &1937781430
 MonoBehaviour:
   m_ObjectHideFlags: 0
