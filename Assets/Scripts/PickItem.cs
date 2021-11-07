@@ -51,6 +51,7 @@ public class PickItem : MonoBehaviour, IInteractable
         if (gameObject.name == "mainDiamond")
         {
             GameObject.Find("doorLockManager").GetComponent<managedoorLock>().openDoor = true;
+            Debug.Log("And scene...");
         }
     }
 }
