@@ -27,6 +27,7 @@ public class ManageText : MonoBehaviour
     {
 
         // infoText.GetComponent<Text>().text = info1;
+        storyText.SetActive(false);
 
     }
 
@@ -34,8 +35,12 @@ public class ManageText : MonoBehaviour
     void Update()
     {
         if (sidx <= 4)
-            if (frame % 1000 == 0) 
+            if (frame % 1000 == 0)
+            {
+                storyText.SetActive(true);
                 storyText.GetComponent<Text>().text = story[sidx++];
+                storyText.SetActive(true);
+            }
 
 
         frame += 1;

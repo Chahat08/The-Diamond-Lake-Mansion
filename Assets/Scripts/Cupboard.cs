@@ -17,7 +17,15 @@ public class Cupboard : MonoBehaviour, IInteractable
         // if the current selected slot has an item whose name is the same as UnlockItem, then
         if (inventory.GetComponent<Inventory>().currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite.name == UnlockItem)
         {
-            Debug.Log("unlock");
+            Debug.Log("unlocked");
+
+            if (gameObject.GetComponent<AudioSource>() != null)
+            {
+                AudioSource audio = gameObject.GetComponent<AudioSource>();
+                AudioClip clip = gameObject.GetComponent<AudioSource>().clip;
+                audio.PlayOneShot(clip);
+            }
+
             cupboardRight.SetActive(true);
             inventory.GetComponent<Inventory>().currentSelectedSlot.GetComponent<Slot>().ItemProperty = Slot.property.empty;
             inventory.GetComponent<Inventory>().currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite =
