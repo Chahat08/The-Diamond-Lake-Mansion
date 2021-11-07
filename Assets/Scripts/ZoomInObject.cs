@@ -5,6 +5,7 @@ using UnityEngine;
 public class ZoomInObject : MonoBehaviour, IInteractable
 {
     public float zoomRatio = 0.5f;
+    
     public void Interact(DisplayImage currentDisplay)
     {
         Camera.main.orthographicSize *= zoomRatio;
@@ -18,6 +19,13 @@ public class ZoomInObject : MonoBehaviour, IInteractable
             AudioSource audio = gameObject.GetComponent<AudioSource>();
             AudioClip clip = gameObject.GetComponent<AudioSource>().clip;
             audio.PlayOneShot(clip);
+        }
+        if(gameObject.name=="drums" || gameObject.name=="piano")
+        {
+            if(gameObject.name=="drums")
+                GameObject.Find("musicPuzzleManager").GetComponent<manageMusicPuzzle>().clickOrder += "d";
+            else if(gameObject.name=="piano")
+                GameObject.Find("musicPuzzleManager").GetComponent<manageMusicPuzzle>().clickOrder += "p";
         }
 
         ConstraintCamera();
