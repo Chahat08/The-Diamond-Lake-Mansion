@@ -27,7 +27,7 @@ public class ManageText : MonoBehaviour
     {
 
         // infoText.GetComponent<Text>().text = info1;
-        storyText.SetActive(false);
+        //storyText.SetActive(false);
 
     }
 
@@ -38,11 +38,11 @@ public class ManageText : MonoBehaviour
         {
             if (frame % 800 == 0)
             {
-                storyText.SetActive(true);
+                //storyText.SetActive(true);
                 storyText.GetComponent<Text>().text = story[sidx++];
-                storyText.SetActive(true);
+                //storyText.SetActive(false);
             }
-
+            if (frame == 4) storyText.SetActive(false);
             frame += 1;
         }
     }
