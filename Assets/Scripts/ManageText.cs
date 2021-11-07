@@ -35,14 +35,15 @@ public class ManageText : MonoBehaviour
     void Update()
     {
         if (sidx <= 4)
-            if (frame % 1000 == 0)
+        {
+            if (frame % 800 == 0)
             {
                 storyText.SetActive(true);
                 storyText.GetComponent<Text>().text = story[sidx++];
                 storyText.SetActive(true);
             }
 
-
-        frame += 1;
+            frame += 1;
+        }
     }
 }
