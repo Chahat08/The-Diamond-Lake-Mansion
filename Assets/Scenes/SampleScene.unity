@@ -167,6 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UnlockItem: diamond
   lock_name: lock2
+  unlocked: 0
 --- !u!61 &71927060
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -507,7 +508,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &168916612
 Transform:
   m_ObjectHideFlags: 0
@@ -1767,11 +1768,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d10cc94e47e47e418879042504b9ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  door: 0
   wait_time: 2.5
   scene: Conclusion
 --- !u!1 &550622854
@@ -2641,7 +2643,12 @@ PrefabInstance:
     - target: {fileID: 1312346554328099754, guid: d889aeb016e6f5b48bea0d2a192526b6,
         type: 3}
       propertyPath: m_Name
-      value: changeViewPoint (1)
+      value: todo
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312346554328099754, guid: d889aeb016e6f5b48bea0d2a192526b6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1312346554328099755, guid: d889aeb016e6f5b48bea0d2a192526b6,
         type: 3}
@@ -3504,6 +3511,7 @@ GameObject:
   - component: {fileID: 940040053}
   - component: {fileID: 940040052}
   - component: {fileID: 940040054}
+  - component: {fileID: 940040055}
   m_Layer: 0
   m_Name: sceneManager
   m_TagString: Untagged
@@ -3555,6 +3563,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d366030da75b534683b9f84f0864363, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &940040055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940040051}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d10cc94e47e47e418879042504b9ad4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door: 0
+  wait_time: 1
+  scene: Conclusion
 --- !u!1 &941764272
 GameObject:
   m_ObjectHideFlags: 0
@@ -3865,6 +3888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UnlockItem: diamond
   lock_name: lock1
+  unlocked: 0
 --- !u!61 &971121974
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4422,8 +4446,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bf35781a89eea148a5ba1ac69f00a3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openDoor: 0
+  d1: {fileID: 971121971}
+  d2: {fileID: 71927057}
   mainDiamond: {fileID: 2121333935}
+  wait_time: 5
+  scene: Conclusion
 --- !u!1001 &1322876937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4871,12 +4898,32 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1443367055 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1312346554328099754, guid: d889aeb016e6f5b48bea0d2a192526b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 785083075}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1443367056 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1312346554328099753, guid: d889aeb016e6f5b48bea0d2a192526b6,
     type: 3}
   m_PrefabInstance: {fileID: 785083075}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1443367057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443367055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48bd51de83f4522478436c0131cb234a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chk1: 0
+  chk2: 0
 --- !u!1 &1462271988
 GameObject:
   m_ObjectHideFlags: 0
@@ -5238,7 +5285,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1538185187
 Transform:
   m_ObjectHideFlags: 0

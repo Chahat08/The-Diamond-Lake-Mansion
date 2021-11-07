@@ -7,8 +7,7 @@ public class CheckEnd : MonoBehaviour
 {
 
     // private GameObject text;
-    private GameObject check1;
-    private GameObject check2;
+    public bool door=false;
 
     public float wait_time = 5f;
     public string scene = "Conclusion";
@@ -16,17 +15,15 @@ public class CheckEnd : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       // text = GameObject.Find("Text");
-       // text.SetActive(false);
+        // text = GameObject.Find("Text");
+        // text.SetActive(false);
+        //door = GameObject.Find("doorLockManager").GetComponent<managedoorLock>().openDoor;
     }
 
     // Update is called once per frame
     void Update()
     {
-        check1 = GameObject.Find("check1");
-        check2 = GameObject.Find("check2");
-
-        if (check1 && check2)
+        if (door)
         {
             // text.SetActive(true);
             // Application.Quit();
@@ -37,7 +34,6 @@ public class CheckEnd : MonoBehaviour
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(wait_time);
-
         SceneManager.LoadScene(scene);
     }
 }

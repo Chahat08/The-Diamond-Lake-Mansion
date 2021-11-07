@@ -27,11 +27,11 @@ public class PickItem : MonoBehaviour, IInteractable
     void Start()
     {
         // InventorySlots = GameObject.Find("Slots");
-        if (gameObject.name == "mainDiamond")
+        /*if (gameObject.name == "mainDiamond")
         {
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
             gameObject.tag = "Untagged";
-        }
+        }*/
     }
 
     // Update is called once per frame
@@ -55,9 +55,10 @@ public class PickItem : MonoBehaviour, IInteractable
         }
         if (gameObject.name == "mainDiamond")
         {
-            gameObject.tag = "Interactable";
-            GameObject.Find("doorLockManager").GetComponent<managedoorLock>().openDoor = true;
-            Debug.Log("And scene...");
+            //gameObject.tag = "Interactable";
+            //gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            GameObject.Find("doorLockManager").GetComponent<SpriteRenderer>().enabled = true;
+            //Debug.Log("And scene...");
         }
     }
 }
