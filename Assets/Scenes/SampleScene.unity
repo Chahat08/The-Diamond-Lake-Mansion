@@ -818,7 +818,7 @@ PrefabInstance:
     - target: {fileID: 3156137877170164527, guid: 065c0c71b0fb7cc4db0ff5e45e527b14,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3156137877170164527, guid: 065c0c71b0fb7cc4db0ff5e45e527b14,
         type: 3}
@@ -1176,7 +1176,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &442306930
 Transform:
   m_ObjectHideFlags: 0
@@ -1956,7 +1956,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &624673291
 Transform:
   m_ObjectHideFlags: 0
@@ -3014,7 +3014,7 @@ PrefabInstance:
     - target: {fileID: 5377248891932618222, guid: 2efea980a426c7346bd7d01d40be26cd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5377248891932618222, guid: 2efea980a426c7346bd7d01d40be26cd,
         type: 3}
@@ -4580,13 +4580,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1247916732}
   - component: {fileID: 1247916733}
+  - component: {fileID: 1247916734}
   m_Layer: 0
-  m_Name: openDoor
+  m_Name: doorLockManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1247916732
 Transform:
   m_ObjectHideFlags: 0
@@ -4639,7 +4640,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 355fd5fbe370801449899ac0ffd45d97, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4651,6 +4652,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1247916734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247916731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bf35781a89eea148a5ba1ac69f00a3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openDoor: 0
 --- !u!1001 &1322876937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5131,7 +5145,7 @@ PrefabInstance:
     - target: {fileID: 5377248891932618222, guid: 2efea980a426c7346bd7d01d40be26cd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5377248891932618222, guid: 2efea980a426c7346bd7d01d40be26cd,
         type: 3}
@@ -5348,11 +5362,11 @@ Transform:
   m_Children:
   - {fileID: 1082108100}
   - {fileID: 1562178896}
-  - {fileID: 618180589}
   - {fileID: 1204697895}
   - {fileID: 1003245647}
   - {fileID: 1495839021}
   - {fileID: 751666267}
+  - {fileID: 618180589}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6814,7 +6828,7 @@ PrefabInstance:
     - target: {fileID: 3156137877170164527, guid: 065c0c71b0fb7cc4db0ff5e45e527b14,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3156137877170164527, guid: 065c0c71b0fb7cc4db0ff5e45e527b14,
         type: 3}
@@ -7028,7 +7042,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 625bded518117664f97b732d299754be, type: 3}
+  m_Sprite: {fileID: 21300000, guid: beabc4072728c9d45a786d91193c1336, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7152,7 +7166,7 @@ PrefabInstance:
     - target: {fileID: 3156137877170164527, guid: 065c0c71b0fb7cc4db0ff5e45e527b14,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3156137877170164527, guid: 065c0c71b0fb7cc4db0ff5e45e527b14,
         type: 3}
@@ -7241,7 +7255,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2108991758
 Transform:
   m_ObjectHideFlags: 0

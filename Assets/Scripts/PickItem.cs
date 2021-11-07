@@ -32,7 +32,7 @@ public class PickItem : MonoBehaviour, IInteractable
     // Update is called once per frame
     void Update()
     {
-        
+  
     }
 
     public void itemPickup()
@@ -47,6 +47,10 @@ public class PickItem : MonoBehaviour, IInteractable
                 Destroy(gameObject);
                 break;
             }
+        }
+        if (gameObject.name == "mainDiamond")
+        {
+            GameObject.Find("doorLockManager").GetComponent<managedoorLock>().openDoor = true;
         }
     }
 }
