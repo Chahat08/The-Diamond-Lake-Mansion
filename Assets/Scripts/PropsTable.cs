@@ -20,7 +20,7 @@ public class PropsTable : MonoBehaviour, IInteractable
     public void Interact(DisplayImage currentDisplay)
     {
         // if the current selected slot has an item whose name is the same as UnlockItem, then
-        if (inventory.GetComponent<Inventory>().currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite.name == UnlockItem)
+        /*if (inventory.GetComponent<Inventory>().currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite.name == UnlockItem)
         {
             Debug.Log("unlock");
             propsTable.SetActive(true);
@@ -38,7 +38,8 @@ public class PropsTable : MonoBehaviour, IInteractable
             inventory.GetComponent<Inventory>().currentSelectedSlot.GetComponent<Slot>().ItemProperty = Slot.property.empty;
             inventory.GetComponent<Inventory>().currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite =
                 Resources.Load<Sprite>("Items/empty");
-        }
+        }*/
+        Application.ExternalEval("window.open(\"http://www.unity3d.com\")");
 
     }
 
