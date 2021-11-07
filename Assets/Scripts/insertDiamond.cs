@@ -14,8 +14,8 @@ public class insertDiamond : MonoBehaviour, IInteractable
 
     private GameObject diamond_lock;
 
-    //public GameObject todo;
-    //private bool c1, c2;
+    private todoManager todo;
+    private bool c1, c2;
 
     public void Interact(DisplayImage currentDisplay)
     {
@@ -29,22 +29,31 @@ public class insertDiamond : MonoBehaviour, IInteractable
                 Resources.Load<Sprite>("Items/empty");
             unlocked = true;
 
-            /*if(c1 && !c2)
+            if(!c1 && !c2)
+            {
+                todo.chk1 = true;
+                todo.stringName = "todo1";
+            }
+
+            //else if(c1 && !c2)
+            else
             {
                 // enable check 2, check 1 enabled already
-                todo.GetComponent<todoManager>().chk2 = true;
+                todo.chk2 = true;
+                todo.stringName = "todo12";
             }
-            else if(c2 && !c1)
+            /*else if(c2 && !c1)
             {
                 // enable check 1, check 2 enabled already
-                todo.GetComponent<todoManager>().chk1 = true;
+                todo.chk1 = true;
+                todo.stringName = "todo1";
 
-                GameObject.Find("check1").SetActive(true);
-                GameObject.Find("todo").GetComponent<ChangeView>().SpriteName = "todo1";
+                //GameObject.Find("check1").SetActive(true);
+                //GameObject.Find("todo").GetComponent<ChangeView>().SpriteName = "todo1";
             }
-            if(GameObject.Find("check2") != null && GameObject.Find("check1") != null)
+            if (GameObject.Find("check2") != null && GameObject.Find("check1") != null)
             {
-                GameObject.Find("todo").GetComponent<ChangeView>().SpriteName = "todo12";
+                //GameObject.Find("todo").GetComponent<ChangeView>().SpriteName = "todo12";
             }*/
         }
 
@@ -57,8 +66,7 @@ public class insertDiamond : MonoBehaviour, IInteractable
         diamond_lock = GameObject.Find(lock_name);
         diamond_lock.SetActive(false);
 
-        /*c1 = todo.GetComponent<todoManager>().chk1;
-        c2 = todo.GetComponent<todoManager>().chk2;*/
+        todo = GameObject.Find("sceneManager").GetComponent<todoManager>();
     }
 
     // Update is called once per frame

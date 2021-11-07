@@ -5,6 +5,7 @@ using UnityEngine;
 public class todoManager : MonoBehaviour
 {
     public bool chk1, chk2;
+    public string stringName = "todo";
     // Start is called before the first frame update
     void Start()
     {
