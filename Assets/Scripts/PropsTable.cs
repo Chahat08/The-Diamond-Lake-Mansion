@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Runtime.InteropServices;
 
 public class PropsTable : MonoBehaviour, IInteractable
 {
@@ -16,6 +17,16 @@ public class PropsTable : MonoBehaviour, IInteractable
     private GameObject check1;
     private bool isOtherCheckActive;
 
+    [DllImport("__Internal")]
+    private static extern void OpenNewTab(string url);
+
+    public void openIt(string url)
+    {
+#if UNITY_EDITOR || UNITY_WEBGL
+             OpenNewTab(url);
+#endif
+        Debug.Log("inside the fn");
+    }
 
     public void Interact(DisplayImage currentDisplay)
     {
@@ -39,7 +50,9 @@ public class PropsTable : MonoBehaviour, IInteractable
             inventory.GetComponent<Inventory>().currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite =
                 Resources.Load<Sprite>("Items/empty");
         }*/
-        Application.ExternalEval("window.open(\"http://www.unity3d.com\")");
+        //Application.ExternalEval("window.open(\"http://www.unity3d.com\")");
+        openIt("www.google.com");
+        Debug.Log("checking open");
 
     }
 
