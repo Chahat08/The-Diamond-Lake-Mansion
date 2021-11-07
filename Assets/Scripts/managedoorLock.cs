@@ -5,13 +5,12 @@ using UnityEngine;
 public class managedoorLock : MonoBehaviour
 {
     public bool openDoor = false;
-    public GameObject mainDiamond;
+    //public GameObject mainDiamond;
 
     // Start is called before the first frame update
     void Start()
     {
        gameObject.GetComponent<SpriteRenderer>().enabled = false;
-       mainDiamond.SetActive(false);
     }
 
     // Update is called once per frame

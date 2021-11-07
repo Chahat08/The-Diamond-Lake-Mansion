@@ -8,6 +8,7 @@ public class insertDiamond : MonoBehaviour, IInteractable
 
     public string UnlockItem;
     public string lock_name;
+    //public bool unlocked = false;
 
     private GameObject inventory;
 
@@ -23,6 +24,7 @@ public class insertDiamond : MonoBehaviour, IInteractable
             inventory.GetComponent<Inventory>().currentSelectedSlot.GetComponent<Slot>().ItemProperty = Slot.property.empty;
             inventory.GetComponent<Inventory>().currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite =
                 Resources.Load<Sprite>("Items/empty");
+            //unlocked = true;
         }
 
     }
